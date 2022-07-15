@@ -1,0 +1,115 @@
+.wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-content {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.modal-btn {
+    background: #0066ff;
+    border: #0066ff solid 1px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease
+}
+
+.modal-btn:hover {
+    background: #0066ff
+}
+
+.modal-window:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10
+}
+
+.modal-window:target:before {
+    display: block
+}
+
+.modal-window-dialog {
+    background: #fefefe;
+    border: #333 solid 1px;
+    border-radius: 5px;
+    margin-left: -180px;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 360px;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -moz-transition: -moz-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out
+}
+
+.modal-window:target .modal-window-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    top: 25%
+}
+
+.modal-window-body {
+    padding: 20px
+}
+
+.modal-window-header,
+.modal-window-footer {
+    padding: 10px 20px
+}
+
+.modal-window-header {
+    border-bottom: #eee solid 1px;
+    font-size: 20px
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0
+}
+
+.close-btn:hover {
+    color: #919191
+}
+
+#close {
+    display: none
+}

@@ -1,0 +1,16 @@
+button {
+    width: 80px;
+}
+
+.remove-btn {
+    background: #55ff00;
+    border: #55ff00 solid 1px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #ffc400;
+    border: #ffc400 solid 1px;
+    color: white;
+    cursor: pointer;
+}
